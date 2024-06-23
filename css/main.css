@@ -23,9 +23,20 @@ body.dark-mood .modal-content {
     color: #fff;
 }
 
-body.dark-mood .btn-close { 
+body.dark-mood .btn-close {
     color: #fff9f9;
-     background-color: #e2e9ef;
+    background-color: #e2e9ef;
+}
+
+body.dark-mood .owl-nav button span {
+    font-size: 2rem;
+    background: gray;
+    padding: 0 22px 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    line-height: 1.6;
 }
 
 body.dark-mood h2,
