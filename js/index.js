@@ -1,3 +1,4 @@
+// import { lang } from './../js/translate.js'
 const sun = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
             <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
@@ -8,12 +9,25 @@ const moon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fil
               </svg>`
 
 $(document).ready(function () {
+
     $('body, .circle').addClass(localStorage.getItem('mood'))
     if ($('body').hasClass('dark-mood')) {
         $('.circle').css({ "left": "100%", "transform": "translateX(-100%)" })
+        $('.mood').children().addClass("dark-mood").html(moon)
+    } else {
+        $('.mood').children().addClass("dark-mood").html(sun)
     }
 
+    $('body').attr("lang", localStorage.getItem('lang')).addClass(`${localStorage.getItem('lang')}-direction`)
+    $(".lang-text").each(function () {
+        let key = $(this).attr("key")
+        let htmlElement = lang[$("body").attr("lang")][key]
+        $(this).html(htmlElement)
+    })
 })
+
+
+
 
 //* GALLARY SLIDER ------------------> 
 $('.owl-carousel.gallary').owlCarousel({
@@ -163,15 +177,9 @@ $(".display-image .close").on("click", function () {
     imagesSecArr = []
     currentIndex = 0
 })
-// //* HIDE iMAGE ----------> 
-// $(".nav-item").on("click", function () {
-//     $(".offcanvas").removeClass("fade show").css("visibility", "hidden").attr("aria-hidden", "true").removeAttr("aria-modal role")
-//     $(".offcanvas-backdrop").removeClass(" show").remove()
-//     $('.navbar-toggler').click()
-// })
 
 //* TOGGLE MOOD ----------> 
-$(".mood ").on("click", function () {
+$(".mood").on("click", function () {
     if (!$(this).children().hasClass("dark-mood")) {
         $(this).children().addClass("dark-mood").html(moon)
         $("body").addClass("dark-mood")
@@ -185,4 +193,117 @@ $(".mood ").on("click", function () {
 
 
     }
+})
+
+
+
+//* TRANSLATE PAGE ----------> 
+const lang = {
+    en: {
+        tit: "The camera",
+        desc: "Let's steal a moment from life",
+        home: "Home",
+        gallary: "Gallary",
+        cameras: "Cameras",
+        testmonials: "Testmonials",
+        contacts: "Contacts",
+        translate: "Langauge",
+        langBtn: "AR",
+        en: "EN",
+        whatCanDoTitle: "What Can camera does?",
+        btnHero: "Call now",
+        capturePhotos: "Capture Photos",
+        takeStillImage: "Take still images",
+        recordVideos: "Record Videos",
+        captureImage: "Capture moving images with sound",
+        zoomInOut: "Zoom In/Out",
+        adjustLens: "Adjust the lens to focus on distant or close subjects",
+        adjustFocus: "Adjust Focus",
+        automaticManual: "Automatically or manually focus on subjects",
+        changeExposure: "Change Exposure",
+        adjustAmount: "Adjust the amount of light entering the camera",
+        changeISO: "Change ISO Settings",
+        empcontrolCameraty: "Control the camera’s sensitivity to light",
+        applyFilters: "Apply Filters",
+        addartistic: "Add artistic effects to photos and videos",
+        shootBurstMode: "Shoot in Burst Mode",
+        captureSeveralPhotos: "Capture several photos in quick succession",
+        captureSeveralPhotos: "",
+        gallaryHead: "gallary",
+        cameraKind: "KIND OF CAMERAS",
+        testmoials: "TESTMONIALS",
+        contacts: "CONTACT US",
+        all: "All",
+        canon: "Canon",
+        nikon: "Nikon",
+        sony: "Sony",
+        empty: "",
+
+
+    },
+    ar: {
+
+        tit: "الكاميرا",
+        desc: "هيا لنسرق من الحياة لحظة",
+        home: "الرئيسية",
+        gallary: "معرض الصور",
+        cameras: "الكاميرات",
+        testmonials: "أراء العملاء",
+        contacts: "تواصل معنا",
+        translate: "اللغة",
+        langBtn: "إنجليزي",
+        en: "إنجليزي",
+        whatCanDoTitle: "ماذا تستطيع أن تفعل الكاميرا؟",
+        btnHero: "إتصل الآن",
+        capturePhotos: "إلتقاط الصور",
+        takeStillImage: "إلتقاط الصور الثابتة",
+        recordVideos: "تسجيل فيدوهات",
+        captureImage: "التقاط الصور المتحركة بالصوت",
+        zoomInOut: "تكبير وتصغير",
+        adjustLens: "اضبط العدسة للتركيز على الأهداف البعيدة أو القريبة",
+        adjustFocus: "ضبط التركيز",
+        automaticManual: "التركيز تلقائيًا أو يدويًا على الموضوعات",
+        changeExposure: "تغيير التعرض",
+        adjustAmount: "ضبط كمية الضوء الداخلة إلى الكاميرا",
+        changeISO: "تغيير إعدادات ISO",
+        controlCamera: "التحكم في حساسية الكاميرا للضوء",
+        addartistic: "إضافة تأثيرات فنية على الصور ومقاطع الفيديو",
+        shootBurstMode: "تبادل لاطلاق النار في وضع الاندفاع",
+        applyFilters: "تطبيق التأثيرات المخلفتة",
+        captureSeveralPhotos: "التقاط عدة صور في تتابع سريع",
+        gallaryHead: "معرض الصور",
+        cameraKind: "أنواع الكاميرات",
+        testmoials: "أراء عملائنا",
+        contacts: "تواصل معنا",
+        all: "الجميع",
+        canon: "كانون",
+        nikon: "نيكون",
+        sony: "سوني",
+
+    }
+}
+let langAttr = $("body").attr("lang")
+$(".lang-btn").on("click", function () {
+
+    //* CHANGE BODY ATTR LANG ---------------->
+    if ($("body").attr("lang") == "en" && !$("body").hasClass("ar-direction")) {
+        $("body").attr("lang", "ar").addClass('ar-direction').removeClass('en-direction')
+        //  $(".lang-btn.en").html('إنجليزي')
+
+    } else {
+        console.log("en");
+        //  $(".lang-btn").html('En')
+        $("body").attr("lang", "en").addClass('en-direction').removeClass('ar-direction')
+    }
+
+    localStorage.setItem('lang', $("body").attr("lang"));
+
+
+
+    //* CHANGE HTML ELEMENTS ---------------->
+    $(".lang-text").each(function () {
+        let key = $(this).attr("key")
+        let htmlElement = lang[$("body").attr("lang")][key]
+        $(this).html(htmlElement)
+    })
 })

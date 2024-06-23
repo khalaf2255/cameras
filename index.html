@@ -29,13 +29,13 @@
     <title>Camera</title>
 </head>
 
-<body>
+<body class="light-mood">
 
     <!--* STARE NAVBAR -->
     <section class="navbar-section">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand me-auto" href="#"><img src="images/logo.png" alt=""></a>
+                <a class="navbar-brand " href="#"><img src="images/logo.png" alt=""></a>
 
 
 
@@ -55,6 +55,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!--!  MOBILE NAVBAR    -->
                 <div class="offcanvas offcanvas-start navbar-mobile" data-bs-scroll="true" tabindex="-1"
                     id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                     <div class="offcanvas-header">
@@ -74,43 +75,62 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav  mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link lang-text active" key="home" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#gallary">Gallary</a>
+                                <a class="nav-link lang-text " key="gallary" href="#gallary">Gallary</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#camera-kind">Cameras</a>
+                                <a class="nav-link lang-text " key="cameras" href="#camera-kind">Cameras</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#testmonials">Testmonials</a>
+                                <a class="nav-link lang-text " key="testmonials" href="#testmonials">Testmonials</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contacts">Contacts</a>
+                                <a class="nav-link lang-text " key="contacts" href="#contacts">Contacts</a>
+                            </li>
+                            <li class="nav-item dropdown lang-text">
+                                <a class="nav-link dropdown-toggle lang-text" key="translate" href="#"
+                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Langauge
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li class="lang-btn lang-text" key="langBtn">AR</li>
+                                </ul>
                             </li>
 
                         </ul>
                     </div>
                 </div>
 
-
+                <!--!  DESKTOP NAVBAR    -->
                 <div class="collapse navbar-collapse flex-grow-0 navbar-desktop" id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link  active" aria-current="page" aria-label="Close" href="#">Home</a>
+                            <a class="nav-link lang-text active" key="home" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " aria-label="Close" href="#gallary">Gallary</a>
+                            <a class="nav-link lang-text " key="gallary" href="#gallary">Gallary</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " aria-label="Close" href="#camera-kind">Cameras</a>
+                            <a class="nav-link lang-text " key="cameras" href="#camera-kind">Cameras</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " aria-label="Close" href="#testmonials">Testmonials</a>
+                            <a class="nav-link lang-text " key="testmonials" href="#testmonials">Testmonials</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " aria-label="Close" href="#contacts">Contacts</a>
+                            <a class="nav-link lang-text " key="contacts" href="#contacts">Contacts</a>
                         </li>
+                        <li class="nav-item dropdown lang-text">
+                            <a class="nav-link dropdown-toggle lang-text" key="translate" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="lang-btn ar lang-text" key="langBtn">AR</li>
+                            </ul>
+                        </li>
+
                         <li class="nav-item li-mood btn-mood-desktop">
                             <div class="mood"><span class="circle">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -133,9 +153,9 @@
     <!--* STARE NAVBAR -->
     <section>
         <div class="hero">
-            <h1>The camera</h1>
-            <p>Let's steal a moment from life</p>
-            <button class="btn">Call now</button>
+            <h1 class="lang-text" key="tit">The camera</h1>
+            <p class="lang-text" key="desc">Let's steal a moment from life</p>
+            <button class="lang-text" key="btnHero" class="btn">Call now</button>
         </div>
     </section>
     <!--* END NAVBAR -->
@@ -149,34 +169,40 @@
                 <img src="images/what-can-do.jpg" alt="what-can-does.jpg">
             </div>
             <div class="text-what-can-does col-sm-12 col-lg-7">
-                <h2>What Can camera does?</h2>
+                <h2 class="lang-text" key="whatCanDoTitle">What Can camera does?</h2>
                 <ul>
                     <li>
-                        <b>Capture Photos:</b> Take still images.
+                        <b class="lang-text" key="capturePhotos">Capture Photos</b>: <span class="lang-text"
+                            key="takeStillImage">Take still images.</span>
                     </li>
                     <li>
-                        <b>Record Videos:</b> Capture moving images with sound.
+                        <b class="lang-text" key="recordVideos">Record Videos</b>: <span class="lang-text"
+                            key="captureImage">Capture moving images with sound.</span>
                     </li>
                     <li>
-                        <b> Zoom In/Out:</b> Adjust the lens to focus on distant or close subjects.
+                        <b class="lang-text" key="zoomInOut">Zoom In/Out</b>: <span class="lang-text"
+                            key="adjustLens">Adjust the lens to focus on distant or close subjects.</span>
                     </li>
                     <li>
-                        <b>Adjust Focus:</b> Automatically or manually focus on subjects.
+                        <b class="lang-text" key="adjustFocus">Adjust Focus</b>: <span class="lang-text"
+                            key="automaticManual">Automatically or manually focus on subjects.</span>
                     </li>
                     <li>
-                        <b>Change Exposure:</b> Adjust the amount of light entering the camera.
+                        <b class="lang-text" key="changeExposure">Change Exposure</b>: <span class="lang-text"
+                            key="adjustAmount">Adjust the amount of light entering the camera.</span>
                     </li>
                     <li>
-                        <b>Change ISO Settings:</b> Control the camera’s sensitivity to light.
-                    </li>
-
-                    <li>
-                        <b>Apply Filters:</b> Add artistic effects to photos and videos.
+                        <b class="lang-text" key="changeISO">Change ISO Settings</b>: <span class="lang-text"
+                            key="controlCamera">Control the camera’s sensitivity to light.</span>
                     </li>
                     <li>
-                        <b>Shoot in Burst Mode:</b> Capture several photos in quick succession.
+                        <b class="lang-text" key="applyFilters">Apply Filters</b>: <span class="lang-text"
+                            key="addartistic">Add artistic effects to photos and videos.</span>
                     </li>
-
+                    <li>
+                        <b class="lang-text" key="shootBurstMode">Shoot in Burst Mode</b>: <span class="lang-text"
+                            key="captureSeveralPhotos">Capture several photos in quick succession.</span>
+                    </li>
                 </ul>
             </div>
 
@@ -207,7 +233,7 @@
 
         </div>
         <div class="container">
-            <h2 align="center">GALLARY</h2>
+            <h2 align="center" class="lang-text" key="gallaryHead" >GALLARY</h2>
             <div class="owl-carousel gallary owl-theme">
 
                 <div class="item">
@@ -249,18 +275,18 @@
     <!--* CAMERA'S KIND -->
     <Section class="camera-kind" id="camera-kind">
         <div class="container">
-            <h2 align="center">KIND OF CAMERAS</h2>
+            <h2  align="center" class="lang-text" key="cameraKind">KIND OF CAMERAS</h2>
             <div class="filter">
-                <div data-btn-camera-kind="all" class="kind-camera all active">
+                <div data-btn-camera-kind="all"  key="all" class="kind-camera lang-text all active">
                     All
                 </div>
-                <div data-btn-camera-kind="canon" class="kind-camera canon">
+                <div data-btn-camera-kind="canon"  key="canon" class="kind-camera lang-text canon">
                     Canon
                 </div>
-                <div data-btn-camera-kind="nikon" class="kind-camera nikon">
+                <div data-btn-camera-kind="nikon"  key="nikon" class="kind-camera lang-text nikon">
                     Nikon
                 </div>
-                <div data-btn-camera-kind="sony" class="kind-camera sony">
+                <div data-btn-camera-kind="sony"  key="sony" class="kind-camera lang-text sony">
                     Sony
                 </div>
             </div>
@@ -825,7 +851,7 @@
     <!--* START TESTMONIALS  -->
     <section class="testmonials" id="testmonials">
         <div class="container">
-            <h2 align="center">TESTMONIALS</h2>
+            <h2 align="center" class="lang-text" key="testmoials">TESTMONIALS</h2>
 
             <div class="owl-carousel testmoials owl-theme owl-loaded owl-drag">
 
@@ -1203,7 +1229,7 @@
     <!--* START CONTACTS  -->
     <section class="contacts" id="contacts">
         <div class="container">
-            <h2 align="center">CONTACT US</h2>
+            <h2 align="center" class="lang-text" key="contacts">CONTACT US</h2>
 
             <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
 
