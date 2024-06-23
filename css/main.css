@@ -9,7 +9,52 @@ body {
     font-family: "Titillium Web", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: #fff;
 }
+
+
+body.dark-mood {
+    transition: .4s;
+    background-color: #000;
+}
+
+body.dark-mood .modal-content {
+    background-color: #524949;
+    color: #fff;
+}
+
+body.dark-mood .btn-close { 
+    color: #fff9f9;
+     background-color: #e2e9ef;
+}
+
+body.dark-mood h2,
+body.dark-mood .testmonials .owl-carousel.owl-drag .owl-item,
+body.dark-mood .contacts .half-col,
+body.dark-mood .navbar-mobile,
+body.dark-mood .camera-kind .cameras .camera-box {
+    background: #9E9E9E;
+}
+
+body.dark-mood .navbar-light .navbar-toggler {
+    background: white;
+}
+
+body.dark-mood .bg-light {
+    background-color: #000 !important;
+    height: 70px;
+    box-shadow: 0px 1px 9px gray;
+}
+
+body.dark-mood .bg-light * {
+    color: #fff !important;
+}
+
+body.dark-mood ul li {
+    color: #fff;
+}
+
+
 
 .disabled {
     opacity: .6;
@@ -41,10 +86,53 @@ button:focus:not(:focus-visible) {
     box-shadow: 0px 1px 9px gray;
 }
 
+
+
+
 .navbar-mobile {
     display: none;
     background: #feeee2;
 }
+
+.btn-mood-mobile {
+    display: none;
+}
+
+.li-mood {
+    align-items: center;
+}
+
+.btn-mood-desktop {
+    display: flex;
+}
+
+.mood {
+    width: 55px;
+    height: 25px;
+    background: rgb(255 253 252);
+    border-radius: 20px;
+    box-shadow: 0 0 5px #8f8686;
+    margin-left: 1rem;
+    position: relative;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.mood .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8bb6a;
+    width: 27px;
+    height: inherit;
+    border-radius: 20px;
+    position: absolute;
+    right: auto;
+    transition: .5s;
+    transform: translateX(0);
+    left: 0;
+}
+
 
 /* NAVBAR */
 

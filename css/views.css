@@ -20,13 +20,21 @@
 
 /** `lg` applies to medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+    .li-mood {
+        margin-right: 1rem;
+    }
 
-    .navbar-desktop {
+    .navbar-desktop,
+    .btn-mood-desktop {
         display: none;
     }
 
     .navbar-mobile {
         display: block;
+    }
+
+    .btn-mood-mobile {
+        display: flex;
     }
 
     .what-can-does {
