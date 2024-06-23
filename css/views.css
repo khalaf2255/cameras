@@ -159,4 +159,8 @@
         top: 55px;
         right: 10px;
     }
+
+    .offcanvas-start {
+        width: 300px;
+    }
 }

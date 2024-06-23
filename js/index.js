@@ -163,12 +163,12 @@ $(".display-image .close").on("click", function () {
     imagesSecArr = []
     currentIndex = 0
 })
-//* HIDE iMAGE ----------> 
-$(".nav-item").on("click", function () {
-    $(".offcanvas").removeClass("fade show").css("visibility", "hidden").attr("aria-hidden", "true").removeAttr("aria-modal role")
-    $(".offcanvas-backdrop").removeClass(" show").remove()
-    $('.navbar-toggler').click()
-})
+// //* HIDE iMAGE ----------> 
+// $(".nav-item").on("click", function () {
+//     $(".offcanvas").removeClass("fade show").css("visibility", "hidden").attr("aria-hidden", "true").removeAttr("aria-modal role")
+//     $(".offcanvas-backdrop").removeClass(" show").remove()
+//     $('.navbar-toggler').click()
+// })
 
 //* TOGGLE MOOD ----------> 
 $(".mood ").on("click", function () {
