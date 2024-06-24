@@ -201,6 +201,7 @@ $(".mood").on("click", function () {
 //* TRANSLATE PAGE ----------> 
 const lang = {
     en: {
+        loading: "Loading...",
         tit: "The camera",
         desc: "Let's steal a moment from life",
         home: "Home",
@@ -222,7 +223,7 @@ const lang = {
         changeExposure: "Change Exposure",
         adjustAmount: "Adjust the amount of light entering the camera",
         changeISO: "Change ISO Settings",
-        empcontrolCameraty: "Control the camera’s sensitivity to light",
+        controlCamera: "Control the camera’s sensitivity to light",
         applyFilters: "Apply Filters",
         addartistic: "Add artistic effects to photos and videos",
         shootBurstMode: "Shoot in Burst Mode",
@@ -255,7 +256,7 @@ const lang = {
 
     },
     ar: {
-
+        loading: "جاري التحميل...",
         tit: "الكاميرا",
         desc: "هيا لنسرق من الحياة لحظة",
         home: "الرئيسية",
@@ -305,7 +306,7 @@ const lang = {
         callUs: "اتصل بنا",
         emailUs: "راسلنا",
         address: "A108 شارع آدم، نيويورك، نيويورك 535022",
-        submit:"إرسال الرسالة"
+        submit: "إرسال الرسالة"
 
     }
 }

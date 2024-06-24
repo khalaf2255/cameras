@@ -327,6 +327,8 @@ h2 {
 
 .owl-nav button span {
     font-size: 2rem;
+    width: 50px;
+    height: 50px;
 }
 
 .owl-nav button span:hover {
@@ -580,7 +582,7 @@ body.ar-direction .btn-close {
 
 body.dark-mood .owl-nav button span {
     font-size: 2rem;
-    background: gray;
+    background: #f7f7f7;
     padding: 0 22px 5px;
     display: inline-flex;
     align-items: center;
@@ -654,6 +656,12 @@ body.dark-mood .lang-btn {
 .ar-direction ul:not(.dropdown-menu) {
     padding-right: 2rem;
     padding-left: 0;
+}
+.en-direction .dropdown-menu.show {
+    font-family: "Amiri", sans-serif;
+}
+.ar-direction .dropdown-menu.show {
+    font-family: "Titillium Web", sans-serif;
 }
 
 .ar-direction .offcanvas-body ul {
