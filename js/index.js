@@ -18,7 +18,8 @@ $(document).ready(function () {
         $('.mood').children().addClass("dark-mood").html(sun)
     }
 
-    $('body').attr("lang", localStorage.getItem('lang')).addClass(`${localStorage.getItem('lang')}-direction`)
+    $('body').attr("lang", localStorage.getItem('lang')).addClass(`${localStorage.getItem('lang')}-direction`).removeClass("isLoading")
+    $('.loader').fadeOut()
     $(".lang-text").each(function () {
         let key = $(this).attr("key")
         let htmlElement = lang[$("body").attr("lang")][key]
@@ -141,7 +142,7 @@ $(".next").on("click", function () {
         $(".display-image img").attr("src", "")
         $(".display-image").append(imagesSecArr[currentIndex])
         $(".display-image img").css({ "height": "85%" })
-    }, 300);
+    }, 100);
 
     if (imagesSecArr.length != currentIndex + 1) {
         currentIndex++
@@ -159,7 +160,7 @@ $(".prev").on("click", function () {
         $(".display-image img").attr("src", "")
         $(".display-image").append(imagesSecArr[currentIndex])
         $(".display-image img").css({ "height": "85%" })
-    }, 300);
+    }, 100);
     if (currentIndex != 1) {
         currentIndex--
         // $(".prev").removeClass("disabled")
@@ -206,10 +207,8 @@ const lang = {
         gallary: "Gallary",
         cameras: "Cameras",
         testmonials: "Testmonials",
-        contacts: "Contacts",
         translate: "Langauge",
-        langBtn: "AR",
-        en: "EN",
+        langBtn: "العربية",
         whatCanDoTitle: "What Can camera does?",
         btnHero: "Call now",
         capturePhotos: "Capture Photos",
@@ -230,15 +229,29 @@ const lang = {
         captureSeveralPhotos: "Capture several photos in quick succession",
         captureSeveralPhotos: "",
         gallaryHead: "gallary",
-        cameraKind: "KIND OF CAMERAS",
-        testmoials: "TESTMONIALS",
-        contacts: "CONTACT US",
+        cameraKind: "Kind of cameras",
+        testmoials: "testmoials",
+        contacts: "Contact us",
         all: "All",
         canon: "Canon",
         nikon: "Nikon",
         sony: "Sony",
-        empty: "",
-
+        descCamera: "Canon Inc. is a Japanese multinational corporation known for its imaging and optical products, including cameras, camcorders, printers, and medical",
+        descCamList1: "Headquarters: Ota, Tokyo, Japan",
+        descCamList2: "Development: Initially focused on manufacturing 35mm cameras, Canon expanded",
+        closeBtn: "Close",
+        showDetails: "Show details",
+        testmonialsParagraphX: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure assumenda non itaque labore repellat recusandae consequuntur et voluptatem quo, provident dignissimos placeat odio accusantium aut aliquam! Deleniti, quia.",
+        clientName: "Client name",
+        username: "Username",
+        email: "Email",
+        subject: "Subject",
+        message: "Message",
+        addressTitle: "Address",
+        callUs: "Call us",
+        emailUs: "Email us",
+        address: "A108 Adam Street, New York, NY 535022",
+        submit: "Send message",
 
     },
     ar: {
@@ -251,8 +264,7 @@ const lang = {
         testmonials: "أراء العملاء",
         contacts: "تواصل معنا",
         translate: "اللغة",
-        langBtn: "إنجليزي",
-        en: "إنجليزي",
+        langBtn: "English",
         whatCanDoTitle: "ماذا تستطيع أن تفعل الكاميرا؟",
         btnHero: "إتصل الآن",
         capturePhotos: "إلتقاط الصور",
@@ -274,11 +286,26 @@ const lang = {
         gallaryHead: "معرض الصور",
         cameraKind: "أنواع الكاميرات",
         testmoials: "أراء عملائنا",
-        contacts: "تواصل معنا",
         all: "الجميع",
         canon: "كانون",
         nikon: "نيكون",
         sony: "سوني",
+        descCamera: "شركة كانون هي شركة يابانية متعددة الجنسيات معروفة بصناعتها للتصوير والتصوير  المنتجات البصرية، بما في ذلك الكاميرات وكاميرات الفيديو والطابعات والطبية",
+        descCamList1: "المقر الرئيسي: أوتا، طوكيو، اليابان",
+        descCamList2: "التطوير: ركزت شركة كانون في البداية على تصنيع كاميرات 35 ملم موسع",
+        closeBtn: "إغلاق",
+        showDetails: "التفاصيل",
+        testmonialsParagraphX: "لقد اشتريت مؤخرًا جهاز القهوة الجديد، وأنا معجب جدًا به. يتميز الجهاز بتصميم أنيق وعصري يضفي جمالية على مطبخي. بالإضافة إلى ذلك، فإن الأداء الممتاز للجهاز يجعل تحضير القهوة أمرًا سريعًا وسهلًا، مع نكهة غنية ومثالية في كل مرة. بالتأكيد، أصبح هذا الجهاز جزءًا لا غنى عنه في روتيني اليومي.",
+        clientName: "اسم العميل",
+        username: "الاسم",
+        email: "البريد الإلكتروني",
+        subject: "الموضوع",
+        message: "الرسالة",
+        addressTitle: "العنوان",
+        callUs: "اتصل بنا",
+        emailUs: "راسلنا",
+        address: "A108 شارع آدم، نيويورك، نيويورك 535022",
+        submit:"إرسال الرسالة"
 
     }
 }

@@ -16,11 +16,17 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    <!--* GOOGLE FONTS -->
+    <!--* GOOGLE ENGLISH FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!--* GOOGLE ARABIC FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
     <!--* CUSTOM CSS -->
@@ -29,8 +35,11 @@
     <title>Camera</title>
 </head>
 
-<body class="light-mood">
-
+<body class="light-mood  isLoading" lang="en">
+    <div class="loader">
+        <img src="images/loader.png" alt="">
+        <h3>Loading...</h3>
+    </div>
     <!--* STARE NAVBAR -->
     <section class="navbar-section">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -95,7 +104,7 @@
                                     Langauge
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li class="lang-btn lang-text" key="langBtn">AR</li>
+                                    <li class="lang-btn lang-text" key="langBtn">العربية</li>
                                 </ul>
                             </li>
 
@@ -127,7 +136,7 @@
                                 Dropdown
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="lang-btn ar lang-text" key="langBtn">AR</li>
+                                <li class="lang-btn ar lang-text" key="langBtn">العربية</li>
                             </ul>
                         </li>
 
@@ -233,7 +242,7 @@
 
         </div>
         <div class="container">
-            <h2 align="center" class="lang-text" key="gallaryHead" >GALLARY</h2>
+            <h2 align="center" class="lang-text" key="gallaryHead">GALLARY</h2>
             <div class="owl-carousel gallary owl-theme">
 
                 <div class="item">
@@ -275,18 +284,18 @@
     <!--* CAMERA'S KIND -->
     <Section class="camera-kind" id="camera-kind">
         <div class="container">
-            <h2  align="center" class="lang-text" key="cameraKind">KIND OF CAMERAS</h2>
+            <h2 align="center" class="lang-text" key="cameraKind">KIND OF CAMERAS</h2>
             <div class="filter">
-                <div data-btn-camera-kind="all"  key="all" class="kind-camera lang-text all active">
+                <div data-btn-camera-kind="all" key="all" class="kind-camera lang-text all active">
                     All
                 </div>
-                <div data-btn-camera-kind="canon"  key="canon" class="kind-camera lang-text canon">
+                <div data-btn-camera-kind="canon" key="canon" class="kind-camera lang-text canon">
                     Canon
                 </div>
-                <div data-btn-camera-kind="nikon"  key="nikon" class="kind-camera lang-text nikon">
+                <div data-btn-camera-kind="nikon" key="nikon" class="kind-camera lang-text nikon">
                     Nikon
                 </div>
-                <div data-btn-camera-kind="sony"  key="sony" class="kind-camera lang-text sony">
+                <div data-btn-camera-kind="sony" key="sony" class="kind-camera lang-text sony">
                     Sony
                 </div>
             </div>
@@ -295,7 +304,7 @@
                     <img src="images/kinds/c1.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             Show details
                         </button>
@@ -306,20 +315,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Canon</h5>
+                                        <h5 class="modal-title lang-text" id="exampleModalLabel" key="canon">Canon</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/c1.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -328,8 +338,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -341,7 +351,7 @@
                     <img src="images/kinds/n1.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal1">
                             Show details
                         </button>
@@ -352,20 +362,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal1Label">Nikon</h5>
+                                        <h5 class="modal-title lang-text" key="nikon" id="exampleModal1Label">Nikon</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/n1.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -374,8 +385,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -387,7 +398,7 @@
                     <img src="images/kinds/c2.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal2">
                             Show details
                         </button>
@@ -398,20 +409,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal2Label">Canon</h5>
+                                        <h5 class="modal-title lang-text" key="canon" id="exampleModal2Label">Canon</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/c2.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -420,8 +432,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -433,7 +445,7 @@
                     <img src="images/kinds/s1.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal3">
                             Show details
                         </button>
@@ -444,20 +456,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal3Label">Sony</h5>
+                                        <h5 class="modal-title lang-text" key="sony" id="exampleModal3Label">Sony</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/s1.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -466,8 +479,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -479,7 +492,7 @@
                     <img src="images/kinds/n2.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal4">
                             Show details
                         </button>
@@ -490,20 +503,22 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal4Label">Nikon</h5>
+                                        <h5 class="modal-title  lang-text" key="nikon" id="exampleModal4Label">Nikon
+                                        </h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/n2.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -512,8 +527,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -525,7 +540,7 @@
                     <img src="images/kinds/s2.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal5">
                             Show details
                         </button>
@@ -536,20 +551,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal5Label">Sony</h5>
+                                        <h5 class="modal-title lang-text" key="sony" id="exampleModal5Label">Sony</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/s2.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -558,8 +574,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -571,7 +587,7 @@
                     <img src="images/kinds/n3.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal6">
                             Show details
                         </button>
@@ -582,20 +598,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal6Label">Nikon</h5>
+                                        <h5 class="modal-title lang-text" key="nikon" id="exampleModal6Label">Nikon</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/n3.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -604,8 +621,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -617,7 +634,7 @@
                     <img src="images/kinds/c3.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal7">
                             Show details
                         </button>
@@ -628,20 +645,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal7Label">Canon</h5>
+                                        <h5 class="modal-title lang-text" key="canon" id="exampleModal7Label">Canon</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/c3.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -650,8 +668,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -663,7 +681,7 @@
                     <img src="images/kinds/s3.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal8">
                             Show details
                         </button>
@@ -674,20 +692,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal8Label">Sony</h5>
+                                        <h5 class="modal-title lang-text" key="sony" id="exampleModal8Label">Sony</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/s3.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -696,8 +715,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -709,7 +728,7 @@
                     <img src="images/kinds/n4.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal9">
                             Show details
                         </button>
@@ -720,20 +739,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal9Label">Nikon</h5>
+                                        <h5 class="modal-title lang-text" key="nikon" id="exampleModal9Label">Nikon</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/n4.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -742,8 +762,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -755,7 +775,7 @@
                     <img src="images/kinds/s4.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal10">
                             Show details
                         </button>
@@ -766,20 +786,21 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal10Label">Sony</h5>
+                                        <h5 class="modal-title lang-text" key="sony" id="exampleModal10Label">Sony</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/s4.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -788,8 +809,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -801,7 +822,7 @@
                     <img src="images/kinds/c4.png" alt="">
                     <div class="overlay-camera">
                         <!--* Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-primary lang-text" key="showDetails" data-bs-toggle="modal"
                             data-bs-target="#exampleModal11">
                             Show details
                         </button>
@@ -812,20 +833,22 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModal11Label">Canon</h5>
+                                        <h5 class="modal-title lang-text" key="canon" id="exampleModal11Label">Canon
+                                        </h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <img src="images/kinds/c4.png" alt=""><br><br>
-                                        <p>Canon Inc. is a Japanese multinational corporation known for its imaging and
+                                        <p class="lang-text" key="descCamera">Canon Inc. is a Japanese multinational
+                                            corporation known for its imaging and
                                             optical products, including cameras, camcorders, printers, and medical</p>
                                         <ul>
 
-                                            <li>
+                                            <li class="lang-text" key="descCamList1">
                                                 Headquarters: Ota, Tokyo, Japan.
                                             </li>
-                                            <li>
+                                            <li class="lang-text" key="descCamList2">
                                                 Development: Initially focused on manufacturing 35mm cameras, Canon
                                                 expanded
                                             </li>
@@ -834,8 +857,8 @@
                                         </ul>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary lang-text"
+                                            data-bs-dismiss="modal" key="closeBtn">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -864,7 +887,7 @@
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -875,14 +898,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/2.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -893,14 +916,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/3.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -911,14 +934,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/4.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -929,7 +952,7 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/5.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
 
@@ -937,7 +960,7 @@
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -948,14 +971,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/1.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item active" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -966,14 +989,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/2.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item active" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -984,14 +1007,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/3.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item active" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1002,14 +1025,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/4.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1020,14 +1043,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/5.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1038,14 +1061,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/1.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1056,14 +1079,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/2.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1074,14 +1097,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/3.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1092,14 +1115,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/4.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1110,14 +1133,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/5.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
 
                         <div class="owl-item cloned" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p><i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1127,14 +1150,14 @@
                                     </i></p>
 
                                 <img class="avatar" src="images/avatars/1.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1145,14 +1168,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/2.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1163,14 +1186,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/3.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1181,14 +1204,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/4.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1199,14 +1222,14 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/5.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 235px; margin-right: 10px;">
                             <div class="item">
                                 <p>
                                     <i>
-                                        <q>
+                                        <q class="lang-text" key="testmonialsParagraphX">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A beatae iure
                                             assumenda
                                             non itaque labore repellat recusandae consequuntur et voluptatem quo,
@@ -1217,7 +1240,7 @@
                                 </p>
 
                                 <img class="avatar" src="images/avatars/1.png" alt="">
-                                <p class="m-0"><b><i>Ahmed Adel</i></b></p>
+                                <p class="m-0"><b><i class="lang-text" key="clientName">Ahmed Adel</i></b></p>
                             </div>
                         </div>
 
@@ -1241,15 +1264,15 @@
                             <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                                 <div>
-                                    <h3>Address</h3>
-                                    <p>A108 Adam Street, New York, NY 535022</p>
+                                    <h3 class="lang-text" key="addressTitle">Address</h3>
+                                    <p class="lang-text" key="address">A108 Adam Street, New York, NY 535022</p>
                                 </div>
                             </div><!-- End Info Item -->
 
                             <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
                                 <i class="bi bi-telephone flex-shrink-0"></i>
                                 <div>
-                                    <h3>Call Us</h3>
+                                    <h3 class="lang-text" key="callUs">Call Us</h3>
                                     <p>+1 5589 55488 55</p>
                                 </div>
                             </div><!-- End Info Item -->
@@ -1257,7 +1280,7 @@
                             <div class="info-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
                                 <i class="bi bi-envelope flex-shrink-0"></i>
                                 <div>
-                                    <h3>Email Us</h3>
+                                    <h3 class="lang-text" key="emailUs"> Email Us</h3>
                                     <p>info@example.com</p>
                                 </div>
                             </div><!-- End Info Item -->
@@ -1316,29 +1339,29 @@
                             <div class="row gy-4">
 
                                 <div class="col-md-6">
-                                    <label for="name-field" class="pb-2">Your Name</label>
+                                    <label for="name-field" class="pb-2 lang-text" key="username">Your Name</label>
                                     <input type="text" name="name" id="name-field" class="form-control" required="">
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="email-field" class="pb-2">Your Email</label>
+                                    <label for="email-field" class="pb-2 lang-text" key="email">Your Email</label>
                                     <input type="email" class="form-control" name="email" id="email-field" required="">
                                 </div>
 
                                 <div class="col-md-12">
-                                    <label for="subject-field" class="pb-2">Subject</label>
+                                    <label for="subject-field" class="pb-2 lang-text" key="subject">Subject</label>
                                     <input type="text" class="form-control" name="subject" id="subject-field"
                                         required="">
                                 </div>
 
                                 <div class="col-md-12">
-                                    <label for="message-field" class="pb-2">Message</label>
+                                    <label for="message-field" class="pb-2 lang-text" key="message">Message</label>
                                     <textarea class="form-control" name="message" rows="10" id="message-field"
                                         required=""></textarea>
                                 </div>
 
                                 <div class="col-md-12 text-center">
-                                    <button class="btn" type="submit">Send Message</button>
+                                    <button class="btn lang-text" key="submit" type="submit">Send Message</button>
                                 </div>
 
                             </div>

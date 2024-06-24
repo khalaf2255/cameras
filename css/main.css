@@ -12,7 +12,57 @@ body {
     background-color: #fff;
 }
 
+body.isLoading {
+    overflow: hidden;
+}
 
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(175, 173, 173, 0.59);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #feeee2;
+    /* color of the scroll thumb */
+    border-radius: 5px;
+    /* roundness of the scroll thumb */
+    border: 1px solid gray;
+    /* creates padding around scroll thumb */
+}
+
+.loader {
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: #feeee2;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+.loader img {
+    width: 200px;
+    animation: animatename alternate-reverse .7s linear infinite;
+}
+
+@keyframes animatename {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
 
 .disabled {
     opacity: .6;
@@ -26,7 +76,7 @@ body {
 
 button:focus:not(:focus-visible) {
     outline: 0;
-    color: rgb(232 187 106);
+    color: rgb(0, 0, 0);
     border-color: rgb(232 187 106);
 }
 
@@ -511,13 +561,21 @@ body.dark-mood {
 }
 
 body.dark-mood .modal-content {
-    background-color: #524949;
+    background-color: #514d4d;
     color: #fff;
+    box-shadow: 0 0 14px #fff;
 }
 
-body.dark-mood .btn-close {
+body.ar-direction {
+    font-family: "Amiri", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.ar-direction .btn-close {
     color: #fff9f9;
     background-color: #e2e9ef;
+    margin-left: 0;
 }
 
 body.dark-mood .owl-nav button span {
@@ -536,7 +594,7 @@ body.dark-mood .testmonials .owl-carousel.owl-drag .owl-item,
 body.dark-mood .contacts .half-col,
 body.dark-mood .navbar-mobile,
 body.dark-mood .camera-kind .cameras .camera-box {
-    background: #9E9E9E;
+    background: #f7f7f7;
 }
 
 body.dark-mood .navbar-light .navbar-toggler {
@@ -553,6 +611,10 @@ body.dark-mood .bg-light * {
     color: #fff !important;
 }
 
+body.dark-mood .navbar-mobile {
+    background: #544e4e;
+}
+
 body.dark-mood ul li {
     color: #fff;
 }
@@ -566,6 +628,7 @@ body.dark-mood .lang-btn {
 .owl-carousel .owl-stage-outer {
     direction: ltr;
 }
+
 .ar-direction {
     direction: rtl;
 }
@@ -588,3 +651,17 @@ body.dark-mood .lang-btn {
     padding-right: 9rem;
 }
 
+.ar-direction ul:not(.dropdown-menu) {
+    padding-right: 2rem;
+    padding-left: 0;
+}
+
+.ar-direction .offcanvas-body ul {
+    padding-right: 0.5rem;
+    padding-left: 0;
+}
+
+.ar-direction .hero { 
+    background-image: url(../images/hero-ar.jpeg); 
+
+}
